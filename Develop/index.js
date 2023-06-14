@@ -6,7 +6,45 @@ const questions = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.appendFile('README.md', 'data', (err) => err ? console.error(err) : console.log('Commit logged!'));
+    fileName = 'newREADME.md'
+    inquirer
+        .prompt([
+            {
+                type: 'input',
+                message: 'Enter the project title:',
+                name: 'title',
+              },
+              {
+                type: 'input',
+                message: 'Enter a description of the README:',
+                name: 'description',
+              },
+              {
+                type: 'input',
+                message: 'Enter installation instructions:',
+                name: 'installation',
+              },
+              {
+                type: 'input',
+                message: 'Enter usage instructions:',
+                name: 'usage',
+              },
+              {
+                type: 'checkbox',
+                message: 'What license would you like to select?',
+                name: 'license',
+                choices: ['MIT', 'Creative Commons Attribution 4.0', 'Educational Community License v2.0', 'Open Software License 3.0' ]
+              },
+        ])
+        .then((answers) => {
+          console.log(answers);
+        })
+        .catch((error) => {
+          if (error.isTtyError) {
+            console.log(error);
+          } 
+        });
+    // fs.appendFile(fileName, 'data', (err) => err ? console.error(err) : console.log('Commit logged!'));
 }
 
 // TODO: Create a function to initialize app
