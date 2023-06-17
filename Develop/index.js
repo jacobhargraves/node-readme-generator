@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('/Users/jacobhargraves/bootcamp/week-9-challenge/node-readme-generator/Develop/utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [        
     {
         type: 'input',
@@ -47,13 +47,13 @@ function userInput() {
     });
 }
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     const markdownContent = generateMarkdown(data)
     fs.appendFile(fileName, markdownContent, (err) => err ? console.error(err) : console.log('Commit logged!'));
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     userInput();
 }
