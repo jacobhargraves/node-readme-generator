@@ -25,7 +25,14 @@ function generateMarkdown(data) {
     `## Usage\n` +
     `${data.usage}\n\n` +
     `## License\n` +
-    `${data.license.join(', ')}\n`;
+    `${data.license.join(', ')}\n` + 
+    `## How to Contribute\n` +
+    `${data.contribute}\n\n` +
+    `## Tests\n` +
+    `${data.tests}\n\n` +
+    `## Questions\n` +
+    `${data.questions}\n\n` +
+    `[GitHub Link](${data.github})\n\n`;
 }
 
 module.exports = generateMarkdown;
