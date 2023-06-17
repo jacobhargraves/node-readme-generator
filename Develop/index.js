@@ -29,7 +29,7 @@ const questions = [
         type: 'checkbox',
         message: 'What license would you like to select?',
         name: 'license',
-        choices: ['MIT', 'Creative Commons Attribution 4.0', 'Educational Community License v2.0', 'Open Software License 3.0' ]
+        choices: ['MIT', 'Creative Commons Attribution 4.0', 'Eclipse Public License 1.0', 'Mozilla Public License 2.0' ]
     },
     {
         type: 'input',
@@ -43,8 +43,13 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Add questions/info:',
+        message: 'Add instructions on how to reach you for additional questions:',
         name: 'questions',
+    },
+    {
+        type: 'input',
+        message: 'Enter your email address so people can contact you with questions:',
+        name: 'email',
     },
     {
         type: 'input',
@@ -77,6 +82,7 @@ function writeToFile(fileName, data) {
 // function to initialize app
 function init() {
     userInput();
+    
 }
 
 // Function call to initialize app
