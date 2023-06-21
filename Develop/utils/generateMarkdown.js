@@ -82,10 +82,13 @@ function generateMarkdown(data) {
     `${renderLicenseBadge(data.license.join(', '))}\n\n` +
     `${renderLicenseLink(data.license.join(', '))}\n\n` +
     `## Table of Contents\n` +
-    `[Description](#Description)\n\n` +
-    `[Installation](#Installation)\n\n` +
-    `[Usage](#Usage)\n\n` +
-    `[License](#License)\n\n` +
+    `[Description](#description)\n\n` +
+    `[Installation](#installation)\n\n` +
+    `[Usage](#usage)\n\n` +
+    `[License](#license)\n\n` +
+    `[How to Contribute](#how-to-contribute)\n\n` +
+    `[Tests](#tests)\n\n` +
+    `[Questions](#questions)\n\n` +
     `## Description\n` +
     `${data.description}\n\n` +
     `## Installation\n` +
