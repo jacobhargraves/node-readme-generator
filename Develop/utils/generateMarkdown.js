@@ -79,7 +79,7 @@ function renderLicenseSection(license) {
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}\n\n` +
-    `${renderLicenseBadge(data.license.join(', '))}\n` +
+    `${renderLicenseBadge(data.license.join(', '))}\n\n` +
     `${renderLicenseLink(data.license.join(', '))}\n\n` +
     `## Table of Contents\n` +
     `[Description](#Description)\n\n` +
@@ -101,8 +101,8 @@ function generateMarkdown(data) {
     `${data.tests}\n\n` +
     `## Questions\n` +
     `${data.questions}\n` +
-    `Contact me at: ${data.email}\n` +
-    `[GitHub Link](${data.github})`;
+    `Contact me at: ${data.email}\n\n` +
+    `[GitHub Link](${data.github})\n`;
 }
 
 module.exports = generateMarkdown;
